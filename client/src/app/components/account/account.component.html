@@ -1,0 +1,89 @@
+      <div class="account-div">
+        <div class = "login-home"> 
+          <div class = "welcome-content-login"> 
+              <h1>Welcome User!</h1>
+              <h2>Sales Forecasting Application</h2>
+              <h3>{{ actions }} here to predict the Sales</h3>
+              <img src="../../../assets/Images/signup.jpg"/>
+          </div>
+          <div class = "login-box">
+            <div class="loginform" #loginform>
+              <form (ngSubmit)="signIn()" [formGroup]="signInForm">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label><br>
+                  <input required type="email" id="exampleInputEmail1" placeholder="Enter email" name="email" formControlName="email" (keyup)="changeSignInInput()"/>
+                  <span class="text-danger" *ngIf="signInSubmitted && signInForm.controls['email'].errors && signInForm.controls['email'].errors['required']">
+                    *Email is required
+                  </span>
+                  <span class="text-danger" *ngIf="signInSubmitted && signInForm.controls['email'].errors && signInForm.controls['email'].errors['email']">
+                    *Email is invalid
+                  </span><br><br>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label><br>
+                  <input required type="password" id="exampleInputPassword1" placeholder="Password" name="password" formControlName="password" (keyup)="changeSignInInput()"/>
+                  <span class="text-danger" *ngIf="signInSubmitted && signInForm.controls['password'].errors && signInForm.controls['password'].errors['required']">
+                    *Password is required
+                  </span>
+                  <span class="text-danger" *ngIf="signInSubmitted && signInForm.controls['password'].errors && signInForm.controls['password'].errors['minlength']">
+                    *Password must have atleast 8 characters
+                  </span>
+                </div>
+                <div class="text-danger" *ngIf="showSignInError" role="alert"> {{ signInError }} </div>
+                <button type="submit" class="login-btn">Login</button><br><br>
+                <p class="new-user"> New User? 
+                  <span (click)="showSignUp()" class="signupLink"> Click here to sign up </span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+          <div class="signupform" #signupform>
+            <div id="signup-box">
+              <form (ngSubmit)="signUp()" [formGroup]="signUpForm">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Full Name</label>
+                  <input type="text" id="exampleInputName" placeholder="Enter full name" name="fullName" formControlName="fullName"/>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['fullName'].errors && signUpForm.controls['fullName'].errors['required']">
+                    *Full name is required
+                  </span>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['fullName'].errors && signUpForm.controls['fullName'].errors['maxlength']">
+                    *Name should be allowed only 15 characters
+                  </span><br><br>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" id="exampleInputEmail1" placeholder="Enter email" name="email" formControlName="email" (keyup)="changeSignUpInput()"/>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['email'].errors && signUpForm.controls['email'].errors['required']">
+                    *Email is required
+                  </span>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['email'].errors && signUpForm.controls['email'].errors['email']">
+                    *Email is invalid
+                  </span><br><br>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="number" id="phoneNumber" placeholder="Phone Number" name="phoneNumber" formControlName="phoneNumber"/>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['phoneNumber'].errors && signUpForm.controls['phoneNumber'].errors['required']">
+                    *Phone number is required
+                  </span><br><br>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" id="exampleInputPassword1" placeholder="Password" name="password" formControlName="password" />
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['password'].errors && signUpForm.controls['password'].errors['required']">
+                    *Password is required
+                  </span>
+                  <span class="text-danger" *ngIf="signUpSubmitted && signUpForm.controls['password'].errors && signUpForm.controls['password'].errors['minlength']">
+                    *Password must have atleast 8 characters
+                  </span><br><br>
+                </div>
+                <div class="text-danger" *ngIf="showSignUpError" role="alert"> {{ signUpError }} </div>
+                <button type="submit" class="signup-btn">Sign Up</button><br><br>
+                <p class="new-user"> Already an existing user? 
+                  <span (click)="showLogin()" class="loginLink"> Click here to sign in</span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>

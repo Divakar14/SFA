@@ -1,0 +1,108 @@
+#predictDatasetDiv {
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #predictDatasetDiv div {
+    height: auto;
+    padding: 0.5em;
+    padding-bottom: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .predictDatasetHeading {
+    text-align: center;
+    color:#D6EFC7;
+    padding-bottom: 0.8em;
+  }
+  .predictDatasetCard {
+    background-color: #D6EFC7;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .uploadFileLabel {
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+  }
+  .titleLabel {
+    padding-bottom: 0.3em;
+  }
+  .uploadFileDiv {
+    border-radius: 5px;
+    border: 2px dashed #194E48;
+    background-color: #f1f8fe;
+  }
+  .uploadFileDiv div {
+    padding: 2em !important;
+  }
+  .fileUploadExtension {
+    padding-bottom: 5px;
+  }
+  .fileUploadButton::-webkit-file-upload-button {
+    padding: 5px 10px;
+    background-color: #194E48;
+    border: none;
+    border-radius: 5px;
+    color: #FBD686;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+      0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    transition: 100ms ease-out;
+    cursor: pointer;
+  }
+  
+  #title,
+  #predictColumn,
+  #numericalValue,
+  #periodicity {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0%;
+  }
+  .column1,
+  .column2 {
+    margin-top: 0.5em;
+  }
+  .toolTip {
+    font-size: 20px;
+    margin-left: 0.5em;
+    cursor: pointer;
+  }
+  
+.predict-btn{
+  background-color: #194E48;
+    text-decoration: none;
+    color: #FBD686;
+    position: relative;
+    left:160px;
+    padding:8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="number"],
+  input[type="email"]{
+    font-size: 18px;
+    padding: 10px;
+    width: 40%;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.input:focus {
+  outline: 3px solid transparent;
+}
+
+.text-danger{
+  color: red;
+}

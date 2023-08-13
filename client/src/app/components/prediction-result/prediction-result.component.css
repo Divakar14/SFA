@@ -1,0 +1,56 @@
+.predictionResultHeading {
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+    color:#D6EFC7;
+}
+
+.period {
+    margin-left: 2.5em;
+    color:#D6EFC7;
+} 
+
+h2,h3,h4,h6{
+    color:#194E48;
+}
+
+tr,td{
+    color:#194E48;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top:20px;
+}
+
+
+.metrics-box{
+    flex-basis: 45%;
+    height: 280px;
+    padding: 20px;
+    background-color: #D6EFC7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-box{
+    flex-basis: 30%;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: #D6EFC7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-csv{
+    background-color: #194E48;
+    text-decoration: none;
+    color: #FBD686;
+    padding:8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}

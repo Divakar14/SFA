@@ -1,0 +1,21 @@
+header{
+  position: fixed;
+  top:0;
+  z-index: 1;
+  background: transparent;
+  width: 89%;
+  height: 60px;
+  padding-top: 10px;
+  margin-left: 90px;
+}
+
+.welcomeName{
+  margin-top:20px;
+  margin-left: 20px;;
+  color:#D6EFC7;
+}
+
+.header-content{
+  color : #D6EFC7;
+  text-align: center;
+}

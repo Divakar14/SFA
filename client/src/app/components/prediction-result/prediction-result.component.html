@@ -1,0 +1,41 @@
+<div class="predictionResultDiv">
+    <div class="predictionResultSubDiv container-fluid">
+      <app-header> </app-header>
+      <h3 class="predictionResultHeading">Title: {{ title }}</h3>
+      <h4 class="period"> Predicted for {{ numericalValue + " " }}{{ periodicity }} </h4>
+        <div class="canvasDiv"> <app-visualization></app-visualization> </div>
+        <div class="row">
+        <div class="metrics-box">
+          <h2>Prediction Metrics</h2>
+              <h3><b>Mean Absolute Percentage Error : </b>{{ mape }}%</h3>
+              <h3><b>Mean Absolute Error : </b>{{ mae }}</h3>
+              <h3><b>Root Mean Square Error : </b>{{ rmse }}</h3>
+              <h3><b>Mean Squared Error : </b>{{ mse }}</h3> 
+        </div>
+          <div class="download-box">
+            <h2><b>Prediction Values</b></h2>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Predicted Date</th>&nbsp;
+                  <th scope="col">{{ predictedColumnName }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let date of predicted_date; let i = index">
+                  <td> {{ date }} </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <td> {{ predicted_column[i] }} </td>
+                </tr>
+              </tbody>
+            </table><br>
+            <h3> To Download the Predicted CSV File. Click below
+              <i class="fa fa-hand-o-down" style="font-size:24px;"></i>
+            </h3>
+              <h4>
+                <a href="../../../assets/file/prediction.csv" class="download-csv">Download Predicted CSV file</a>
+              </h4>
+          </div>
+        </div>
+      <app-footer> </app-footer>
+    </div>
+  </div>
